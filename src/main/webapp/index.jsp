@@ -1,9 +1,13 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+    pageContext.setAttribute("path", request.getContextPath());
+%>
 
 <!doctype html>
 <html lang="en">
 <head>
-    <title>jQuery后台管理系统可折叠左侧导航菜单特效</title>
+    <title>首页</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -37,14 +41,15 @@
         <div class="sidebar-scroll">
             <nav>
                 <ul class="nav">
-                    <li><a href="link/1/index.html" target="_blank" class="iframe_link active"><span>选择器</span></a></li>
-                    <li><a href="link/2/index.html" target="_blank" class="iframe_link"><span>层次选择器</span></a></li>
+                    <li><a href="${path}/user/userInfo" target="_blank" class="iframe_link active"><span>用户管理</span></a></li>
+                    <li><a href="${path}/toBar" target="_blank" class="iframe_link"><span>图形展示</span></a></li>
+
                     <li>
                         <a href="javascript:;" class="nav-togg"> <span>搭建方法</span> </a>
                         <div>
                             <ul>
                                 <li><a href="link/2/index.html" target="_blank" class="iframe_link"><span>打包</span></a></li>
-                                <li><a href="link/2/index.html" target="_blank" class="iframe_link"><span>啪啪</span></a></li>
+                                <li><a href="echarts/myecharts.jsp" target="_blank" class="iframe_link"><span>啪啪</span></a></li>
                             </ul>
                         </div>
                     </li>

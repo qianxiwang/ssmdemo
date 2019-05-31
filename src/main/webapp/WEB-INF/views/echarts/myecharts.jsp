@@ -14,9 +14,6 @@
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
-<h3>
-    <a class="btn btn-primary" href="${path}/">返回首页</a>
-</h3>
 
 <div id="main" style="width:600px; height:400px;"></div>
 

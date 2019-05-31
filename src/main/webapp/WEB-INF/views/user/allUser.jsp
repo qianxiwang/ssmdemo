@@ -13,6 +13,10 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <%--<link rel="stylesheet" href="../css/heightlength.css">--%>
+    <%--<link rel="stylesheet" href="../css/mxjs.css">--%>
+
 </head>
 
 <body>
@@ -28,12 +32,11 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-8">
             <a class="btn btn-primary" href="${path}/user/toAddUser">新增</a>
-            <a class="btn btn-primary float:right" href="${path}/">返回首页</a>
         </div>
     </div>
     <!-- 表格  -->
-    <div class="row">
-        <div class="col-md-12">
+    <div class="row jsbg">
+        <div class="col-md-12 ">
             <table class="table table-hover">
                 <tr>
                     <th>id</th>
@@ -119,5 +122,10 @@
 
     </div>
 </div>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<script src="${pageContext.request.contextPath }/js/smoothscroll.js"></script>
+<script src="${pageContext.request.contextPath }/js/mking.js"></script>
 </body>
 </html>
