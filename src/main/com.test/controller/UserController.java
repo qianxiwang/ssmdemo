@@ -39,7 +39,7 @@ public class UserController {
 
         model.addAttribute("user", user);
 
-        return "editUser";
+        return "user/editUser";
     }
 
     /**
@@ -51,7 +51,7 @@ public class UserController {
     public String getAllUser(Model model) {
         List<User> user = userService.findAll();
         model.addAttribute("userList", user);
-        return "allUser";
+        return "user/allUser";
     }
 
 
@@ -74,7 +74,7 @@ public class UserController {
 
         model.addAttribute("pageInfo", page);
 
-        return "allUser";
+        return "user/allUser";
     }
 
     /**
@@ -84,7 +84,7 @@ public class UserController {
      */
     @RequestMapping("/toAddUser")
     public String toAddUser() {
-        return "addUser";
+        return "user/addUser";
     }
 
     /**
@@ -129,7 +129,7 @@ public class UserController {
 
             return "redirect:/user/userInfo";
         }
-        return "error";
+        return "user/error";
     }
 
 

@@ -20,7 +20,7 @@ public class EchartsController {
 
     @GetMapping("/toBar")
     public String toBar(HttpServletRequest request, Model model) {
-        return "myecharts";
+        return "echarts/myecharts";
     }
 
     @RequestMapping("/queryForList")
