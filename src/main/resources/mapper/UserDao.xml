@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为UserDao接口方法提供sql语句配置 -->
+<mapper namespace="dao.UserDao">
+
+    <!-- 根据id查找单个用户(使用resultMap的方式) -->
+    <!--<resultMap id="findByName" type="domain.User">-->
+    <!--<id column="id" property="id" jdbcType="NUMERIC"/>-->
+    <!--<result column="name" property="name" jdbcType="VARCHAR"/>-->
+    <!--<result column="age" property="age" jdbcType="NUMERIC"/>-->
+    <!--</resultMap>-->
+
+    <!--<select id="findUserById" resultMap="findByName" parameterType="int">-->
+    <!--SELECT * FROM user WHERE id = #{id}-->
+    <!--</select>-->
+
+
+    <!-- 根据id查找单个用户(使用简单数据类型的方式) -->
+    <select id="findUserById" parameterType="int" resultType="User">
+         select id,name,age from user where id = #{id}
+      </select>
+
+    <!-- 查询所有 -->
+    <select id="findAll" resultType="User">
+         select id,name, age from user
+       </select>
+
+
+    <!-- 新增 -->
+    <insert id="saveUser" parameterType="User">
+         insert into user(name,age) values (#{name},#{age})
+      </insert>
+
+    <!-- 修改 -->
+    <update id="updateUser" parameterType="User">
+        update user set name =#{name},age=#{age} where id=#{id}
+      </update>
+
+    <!-- 删除 -->
+    <delete id="deleteUser" parameterType="int">
+          delete from user where id=#{id}
+    </delete>
+
+    <!--用于图表-->
+    <select id="queryForList" resultType="map">
+        select name,age from user
+    </select>
+
+
+
+</mapper>
