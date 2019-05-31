@@ -30,7 +30,7 @@ public class EchartsController {
 
         for (Map<String, Object> map : lists) {
             for (String s : map.keySet()) {
-                System.out.print("年龄： " + map.get(s));
+                System.out.print("age: " + map.get(s) +" ");
             }
         }
 

@@ -28,6 +28,7 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-8">
             <a class="btn btn-primary" href="${path}/user/toAddUser">新增</a>
+            <a class="btn btn-primary float:right" href="${path}/">返回首页</a>
         </div>
     </div>
     <!-- 表格  -->

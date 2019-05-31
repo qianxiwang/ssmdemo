@@ -1,5 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
 
+<%
+    pageContext.setAttribute("path", request.getContextPath());
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +14,14 @@
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
+<h3>
+    <a class="btn btn-primary" href="${path}/">返回首页</a>
+</h3>
 
 <div id="main" style="width:600px; height:400px;"></div>
 
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         // 初始化
         var myChart = echarts.init($('#main')[0]); // 注意：这里init方法的参数的javascript对象，使用jQuery获取标签时，要将jQuery对象转成JavaScript对象；
 
@@ -57,10 +64,10 @@
             url: '${pageContext.request.contextPath}/queryForList',
             type: 'post',
             dataType: 'json',
-            success: function(data) {
+            success: function (data) {
                 var names = [];
                 var ages = [];
-                $.each(data, function(index, obj) {
+                $.each(data, function (index, obj) {
                     names.push(obj.name);
                     ages.push(obj.age);
                 })
@@ -89,15 +96,15 @@
 <div id="pid-div" style="width:600px; height:400px;"></div>
 
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         var myChart = echarts.init($('#pid-div')[0]);
         var option = {
-            title : {
+            title: {
                 text: '姓名和年龄关系图之饼图',
                 subtext: '测试数据',
-                x:'center'
+                x: 'center'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
@@ -106,13 +113,13 @@
                 left: 'left',
                 data: []
             },
-            series : [
+            series: [
                 {
                     name: '访问来源',
                     type: 'pie',
-                    radius : '55%', // 饼状图的大小
+                    radius: '55%', // 饼状图的大小
                     center: ['50%', '60%'], // 饼状图的位置
-                    data:[],
+                    data: [],
                     itemStyle: {
                         emphasis: {
                             shadowBlur: 10,
@@ -130,12 +137,12 @@
             url: '${pageContext.request.contextPath}/queryForList',
             type: 'post',
             dataType: 'json',
-            success: function(data) {
+            success: function (data) {
                 var names = [];
                 var ages = [];
-                $.each(data, function(index, obj) {
+                $.each(data, function (index, obj) {
                     names.push(obj.name);
-                    ages.push({name:obj.name, value:obj.age});
+                    ages.push({name: obj.name, value: obj.age});
                 })
 
                 myChart.hideLoading(); // 隐藏加载动画
@@ -146,14 +153,13 @@
                     series: [{
                         name: '年龄',
                         type: 'pie', // 设置图表类型为柱状图
-                        data:  ages // 设置纵坐标的刻度
+                        data: ages // 设置纵坐标的刻度
                     }]
                 });
             }
         });
     });
 </script>
-
 
 
 </body>

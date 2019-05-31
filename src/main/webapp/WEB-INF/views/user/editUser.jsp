@@ -27,9 +27,11 @@
 <form action="" name="userForm">
     <input type="hidden" name="id" value="${user.id}"/>
 
-    姓名：<input type="text" name="name" value="${user.name}"/>
-    年龄：<input type="text" name="age" value="${user.age}"/>
+    姓名：<input type="text" name="name" value="${user.name}"/><br />
+    年龄：<input type="text" name="age" value="${user.age}"/><br />
+
     <input type="button" value="编辑" onclick="updateUser()"/>
+
 </form>
 </body>
 
