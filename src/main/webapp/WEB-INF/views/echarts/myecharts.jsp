@@ -14,7 +14,7 @@
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
-
+<%--柱状图容器--%>
 <div id="main" style="width:600px; height:400px;"></div>
 
 <script type="text/javascript">
@@ -28,8 +28,10 @@
                 text: '姓名和年龄关系图之柱状图',
                 show: true, // 是否显示标题
                 subtext: '测试数据',
+                x: 'center',
                 textStyle: {
-                    fontSize: 18 // 标题文字大小
+                    fontSize: 18, // 标题文字大小
+                    color: '#ffffff'
                 }
             },
             tooltip: {
@@ -39,14 +41,33 @@
                 }
             },
             legend: {
-                data: ['年龄']
+                data: ['年龄'],
+                left: 'left',
+                textStyle: {
+                    color: '#fff'          //legend字体颜色
+                }
             },
             // X轴
             xAxis: {
-                data: [] // 异步请求时,这里要置空
+                data: [], // 异步请求时,这里要置空
+                // x轴的颜色和宽度
+                axisLine:{
+                    lineStyle:{
+                        color:'#fff',
+                        width:1,   //这里是坐标轴的宽度,可以去掉
+                    }
+                }
             },
             // Y轴
-            yAxis: {},
+            yAxis: {
+                // y轴的颜色和宽度
+                axisLine:{
+                    lineStyle:{
+                        color:'#fff',
+                        width:1,                  //这里是坐标轴的宽度
+                    }
+                }
+            },
             series: [{
                 name: '年龄',
                 type: 'bar', // 设置图表类型为柱状图
@@ -99,7 +120,11 @@
             title: {
                 text: '姓名和年龄关系图之饼图',
                 subtext: '测试数据',
-                x: 'center'
+                x: 'center',
+                textStyle: {
+                    fontSize: 18, // 标题文字大小
+                    color: '#ffffff'
+                }
             },
             tooltip: {
                 trigger: 'item',
@@ -108,7 +133,10 @@
             legend: {
                 orient: 'vertical',
                 left: 'left',
-                data: []
+                data: [],
+                textStyle: {
+                    color: '#fff'          //legend字体颜色
+                }
             },
             series: [
                 {

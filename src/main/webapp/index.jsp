@@ -59,7 +59,7 @@
     </div>
     <div class="main">
         <div class="main-content" style="height: 100%;">
-            <iframe src="link/1/index.html" class="iframe_mx uicss-cn"></iframe>
+            <iframe src="${path}/user/userInfo" class="iframe_mx uicss-cn"></iframe>
         </div>
     </div>
 </div>

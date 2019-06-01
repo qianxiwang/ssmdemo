@@ -13,10 +13,6 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
-    <%--<link rel="stylesheet" href="../css/heightlength.css">--%>
-    <%--<link rel="stylesheet" href="../css/mxjs.css">--%>
-
 </head>
 
 <body>
