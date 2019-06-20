@@ -9,7 +9,7 @@
 <head>
     <title>首页</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equsiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
     <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
@@ -43,15 +43,18 @@
                 <ul class="nav">
                     <li><a href="${path}/user/userInfo" target="_blank" class="iframe_link active"><span>用户管理</span></a></li>
                     <li><a href="${path}/toBar" target="_blank" class="iframe_link"><span>图形展示</span></a></li>
+                    <li><a href="${path}/up" target="_blank" class="iframe_link"><span>上传文件</span></a></li>
 
-                    <li>
-                        <a href="javascript:;" class="nav-togg"> <span>搭建方法</span> </a>
+
+                    <li><a href="javascript:;" class="nav-togg"> <span>测试页面</span> </a>
+
                         <div>
                             <ul>
-                                <li><a href="link/2/index.html" target="_blank" class="iframe_link"><span>打包</span></a></li>
-                                <li><a href="echarts/myecharts.jsp" target="_blank" class="iframe_link"><span>啪啪</span></a></li>
+                                <li><a href="link/2/index.html" target="_blank" class="iframe_link"><span>测试页面1</span></a></li>
+                                <li><a href="echarts/myecharts.jsp" target="_blank" class="iframe_link"><span>测试页面2</span></a></li>
                             </ul>
                         </div>
+
                     </li>
                 </ul>
             </nav>

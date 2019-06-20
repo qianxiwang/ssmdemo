@@ -14,6 +14,7 @@
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
+
 <%--柱状图容器--%>
 <div id="main" style="width:600px; height:400px;"></div>
 
